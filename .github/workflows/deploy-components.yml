@@ -6,6 +6,12 @@ on:
       - master # Or your deployment branch
   workflow_dispatch: # Allows manual triggering
 
+permissions:
+  contents: read    # To checkout code
+  pages: write      # To deploy to GitHub Pages
+  id-token: write   # To enable OIDC token generation for deploy-pages
+  # packages: read # May or may not be needed anymore after fixing package-lock.json
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
