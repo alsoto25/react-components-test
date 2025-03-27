@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
 
 export default defineConfig({
+  base: 'https://alsoto25.github.io/react-components-test/',
   plugins: [
     federation({
       name: 'sharedComponents', // Unique name for this remote
