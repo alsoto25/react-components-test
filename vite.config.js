@@ -12,6 +12,7 @@ export default defineConfig({
         './Button': './src/components/Button/index.jsx',
         './Input': './src/components/Input/index.jsx',
       },
+      shared: ['react', 'react-dom'],
     }),
     react(),
   ],
