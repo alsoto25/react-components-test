@@ -3,14 +3,13 @@ name: Deploy Shared Components Remote
 on:
   push:
     branches:
-      - master # Or your deployment branch
-  workflow_dispatch: # Allows manual triggering
+      - master
+  workflow_dispatch:
 
 permissions:
   contents: read    # To checkout code
   pages: write      # To deploy to GitHub Pages
   id-token: write   # To enable OIDC token generation for deploy-pages
-  # packages: read # May or may not be needed anymore after fixing package-lock.json
 
 jobs:
   build-and-deploy:

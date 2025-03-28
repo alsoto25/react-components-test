@@ -6,8 +6,8 @@ export default defineConfig({
   base: 'https://alsoto25.github.io/react-components-test/',
   plugins: [
     federation({
-      name: 'sharedComponents', // Unique name for this remote
-      filename: 'remoteEntry.js', // Standard manifest filename
+      name: 'sharedComponents',
+      filename: 'remoteEntry.js',
       exposes: {
         './Button': './src/components/Button/index.jsx',
         './Input': './src/components/Input/index.jsx',

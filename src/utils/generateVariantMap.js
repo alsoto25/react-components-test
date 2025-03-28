@@ -9,8 +9,8 @@ export default function generateVariantMap(variants) {
     const match = path.match(/variants\/(.+)\.jsx$/);
     if (match) {
       const variantName = match[1];
-      // The value from import.meta.glob is already the dynamic import function!
-      // We just need to wrap it with React.lazy
+      // The value from import.meta.glob is already the dynamic import function
+      // So we wrap it in lazy to create a React component
       variantMap[variantName] = lazy(variants[path]);
     }
   }
